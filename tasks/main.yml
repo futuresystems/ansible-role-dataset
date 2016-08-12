@@ -7,5 +7,5 @@
 
 - name: INRIA Person Dataset
   unarchive: src=ftp://ftp.inrialpes.fr/pub/lear/douze/data/INRIAPerson.tar dest="{{ ansible_env.HOME}}"/dataset/ remote_src=yes
-  when: dataset == "inria_person_dataset" or "human_face_detection"
+  when: dataset == "inria_person_dataset" or "human_and_face_detection"
   # maybe '|upper' is neccessary to ignore uppercase or lowercase
