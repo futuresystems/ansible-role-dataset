@@ -2,9 +2,9 @@
 # tasks file for ansible-role-dataset
 
 - name: Default dataset directory
-  file: path="{{ ansible_env.HOME}}"/dataset/ state=directory mode=0755
+  file: path="{{ ansible_env.HOME}}/dataset/" state=directory mode=0755
 
 - name: INRIA Person Dataset
-  unarchive: src=ftp://ftp.inrialpes.fr/pub/lear/douze/data/INRIAPerson.tar dest="{{ ansible_env.HOME}}"/dataset/ remote_src=yes
+  unarchive: src=ftp://ftp.inrialpes.fr/pub/lear/douze/data/INRIAPerson.tar dest="{{ ansible_env.HOME}}/dataset/" remote_src=yes
   when: dataset == "inria_person_dataset" or "human_and_face_detection"
   # maybe '|upper' is neccessary to ignore uppercase or lowercase
